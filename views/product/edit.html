@@ -31,13 +31,14 @@
      <div class="container mt-3">
         <div class="row d-flex justify-content-center">
             <div class="col-4">
-                <h2>Add Product</h2>
+                <h2>Edit Product</h2>
                 <hr>
 
-                <form action="/products/add" method="POST">
+                <form action="/products/edit" method="POST">
+                    <input type="hidden" name="id" value="{{ .product.Id }}">
                   <div class="mb-3">
                     <label class="form-label">Name</label>
-                    <input type="text" class="form-control" name="name" autocomplete="off">
+                    <input type="text" class="form-control" name="name" autocomplete="off" value = "{{ .product.Name }}">
                   </div>
                   <div class="mb-3">
                     <select class="form-select" name="category_id">
@@ -48,11 +49,11 @@
                   </div>
                   <div class="mb-3">
                         <label class="form-label">Stock</label>
-                        <input type="number" class="form-control" name="stock" autocomplete="off">
+                        <input type="number" class="form-control" name="stock" autocomplete="off" value = "{{ .product.Stock }}">
                   </div>
                   <div class="mb-3">
                     <label class="form-label">Description</label>
-                    <textarea class="form-control" name="description" rows="3"></textarea>
+                    <textarea class="form-control" name="description" rows="3">{{ .product.Description }}</textarea>
                   </div>
                   <div class="float-end">
                     <a href="/products" class="btn btn-secondary">Back</a>
