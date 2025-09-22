@@ -14,5 +14,5 @@ A simple **CRUD (Create, Read, Update, Delete)** REST API built with **Golang**.
 
 ## 🛠 Tech Stack
 - **Language**: Go (Golang)  
-- **Framework/Router**: net/http, gorilla/mux  
-- **Database**: SQLite / MySQL / PostgreSQL (customizable)  
+- **Framework/Router**: net/http 
+- **Database**: MySQL
